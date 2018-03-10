@@ -2,7 +2,6 @@
 CP1404/CP5632 - Practical
 Password checker "skeleton" code to help you get started
 """
-
 MIN_LENGTH = 5
 MAX_LENGTH = 15
 SPECIAL_CHARS_REQUIRED = True
@@ -39,9 +38,9 @@ def is_valid_password(password):
         if char.isdigit():
             count_digit += 1
         # TODO: count each kind of character (use str methods like isdigit)
-        if char.upper():
+        if char.islower():
             count_upper += 1
-        if char.lower():
+        if char.isupper():
             count_lower += 1
         if char in SPECIAL_CHARACTERS:
             count_special += 1
