@@ -1,16 +1,15 @@
 import random
 
 ticket = []
-
+MIN = 1
+MAX = 46
 
 def ticket_line_generator():
     ticket_line = []
-    count = 0
-    while count < 6:
-        ticket_number = random.randint(1, 46)
+    for count in range(6):
+        ticket_number = random.randint(MIN, MAX)
         if ticket_number not in ticket_line:
             ticket_line.append(ticket_number)
-            count += 1
     ticket_line.sort()
     ticket.append(ticket_line)
     return

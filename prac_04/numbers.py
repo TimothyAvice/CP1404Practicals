@@ -16,10 +16,13 @@ Questions
 
 numbers[0] = "ten"
 print(numbers[0])
+
 numbers[-1] = 1
 print(numbers[-1])
+
 task_4 = numbers[:-2]
 print(task_4)
+
 if 9 in numbers:
     print("True")
 else:
