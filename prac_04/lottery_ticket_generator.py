@@ -7,11 +7,10 @@ MAX = 46
 def ticket_generator(picks):
     while len(ticket) < picks:
         ticket_line = []
-        for count in range(6):
-            while len(ticket_line) < 6:
-                ticket_number = random.randint(MIN, MAX)
-                if ticket_number not in ticket_line:
-                    ticket_line.append(ticket_number)
+        while len(ticket_line) < 6:
+            ticket_number = random.randint(MIN, MAX)
+            if ticket_number not in ticket_line:
+                ticket_line.append(ticket_number)
         ticket_line.sort()
         ticket.append(ticket_line)
     return
