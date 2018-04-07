@@ -1,0 +1,15 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.2
+        Button:
+            text: 'List names'
+            on_press: app.list_names()
+        Button:
+            text: 'Clear names'
+            on_press: app.clear_names()
+    BoxLayout:
+        orientation: 'vertical'
+        id: list_box
+        cols: 1
