@@ -1,0 +1,28 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: user_input
+            text: ''
+            # on_text: app.convert_to_km(user_input.text)
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(int(1))
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(int(-1))
+            Button:
+                text: 'Clear'
+                on_press: app.clear()
+    Button:
+        text: 'Convert miles to km'
+        on_press: app.convert_to_km(user_input.text)
+    Button:
+        text: 'Convert km to miles'
+        on_press: app.convert_to_miles(user_input.text)
+    Label:
+        id: output_text
+        text: 'Enter number to convert up top'
