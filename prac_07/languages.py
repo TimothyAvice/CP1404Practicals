@@ -9,6 +9,6 @@ print(ruby)
 language_list = [ruby, python, visual_basic]
 
 print("The Dynamically types languages are:")
-for item in language_list:
-    if item.typing == "Dynamic":
-        print("{}".format(item.field))
+for language in language_list:
+    if language.typing == "Dynamic":
+        print("{}".format(language.name))

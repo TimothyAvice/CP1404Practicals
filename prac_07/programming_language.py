@@ -1,6 +1,6 @@
 class ProgrammingLanguage:
-    def __init__(self, field, typing, reflection, year):
-        self.field = field
+    def __init__(self, name, typing, reflection, year):
+        self.name = name
         self.typing = typing
         self.reflection = reflection
         self.year = year
@@ -12,5 +12,5 @@ class ProgrammingLanguage:
             return False
 
     def __str__(self):
-        return "{}, {} typing, Reflection={}, First appeared in {}".format(self.field, self.typing, self.reflection
+        return "{}, {} typing, Reflection={}, First appeared in {}".format(self.name, self.typing, self.reflection
                                                                            , self.year)
